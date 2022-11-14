@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             API_URL:'https://www.breakingbadapi.com/api/characters',
-            results: null,
+            characters: null,
             error: null
         }
     },
@@ -23,7 +23,7 @@ export default {
             axios.get(url)
             .then(response => {
                 console.log(response);
-                this.results = response.data
+                this.characters = response.data
 
             })
             //questo metodo .catch serve per intercettera eventuali errori
@@ -44,9 +44,9 @@ export default {
 
 <div class="container">
     <div class="row">
-        <div class="col" v-for="character in results">
+        <div class="col" v-for="character in characters">
             <div class="character">
-
+                <img :src="character.img" alt="">
             </div>
         </div>
     </div>
