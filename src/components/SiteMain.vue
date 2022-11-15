@@ -24,19 +24,6 @@ export default {
         </div>
         <!--  <characters /> -->
         <CardsList />
-  <!--       <section class="characters">
-            <div class="container bg-white p-3">
-
-                <div class="alert dark" role="alert">
-                    <p><strong>Found Characters</strong> 62</p>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-5 g-4">
-
-                    <SingleCard v-for="character in state.characters" :character="character"/>
-                </div>
-            </div>
-        </section> -->
     </main>
 </template>
 
