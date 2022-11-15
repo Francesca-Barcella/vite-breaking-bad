@@ -5,8 +5,5 @@ export const state = reactive({
     characters: null,
     loading: true,
     error: null,
-   /*  img: null,
-    name: null,
-    category: null,
-    status: null */
+    filterCategory: ''
 })

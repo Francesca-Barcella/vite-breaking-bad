@@ -1,9 +1,15 @@
 <script>
 import CardsList from './CardsList.vue'
+import {state} from '../state'
 export default {
     name: 'SiteMain',
     components: {
         CardsList
+    },
+    data(){
+        return{
+            state
+        }
     }
 }
 
@@ -14,11 +20,10 @@ export default {
         <!-- filtra per category -->
         <div class="container">
             <div class="select_category">
-                <select class="p-2 m-3 rounded-3">
+                <select class="p-2 m-3 rounded-3" v-model="filterCategory" @change="">
                     <option value="">Select Category</option>
-                    <option value="">Alive</option>
-                    <option value="">Presumed dead</option>
-                    <option value="">PDeceased</option>
+                    <option value="">Breaking Bad</option>
+                    <option value="">Better Call Saul</option>
                 </select>
             </div>
         </div>
