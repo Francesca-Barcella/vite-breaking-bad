@@ -1,13 +1,12 @@
 <script>
 export default {
-    name: 'SiteFooter'
-}
+    name: 'CardList'
+    }
 </script>
 
 <template>
-    <Footer></Footer>
-</template>
 
+</template>
 
 <style lang="scss" scoped>
 

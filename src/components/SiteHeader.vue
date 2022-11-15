@@ -6,7 +6,7 @@ export default {
 
 <template>
     <header>
-        <h1>Breaking Bad Api</h1>
+        <h1 class="p-3">Breaking Bad Api</h1>
     </header>
 </template>
 
