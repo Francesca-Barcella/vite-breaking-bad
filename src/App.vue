@@ -1,24 +1,31 @@
 <script>
 import axios from 'axios'
-/* import CharactersList from './components/CharactersList.vue' */
-import {state} from './state.js'
-/* import SiteHeader from './components/SiteHeader.vue'
+import { state } from './state.js'
+import SiteHeader from './components/SiteHeader.vue'
 import SiteMain from './components/SiteMain.vue'
-import SiteFooter from './components/SiteFooter.vue' */
+import SiteFooter from './components/SiteFooter.vue'
+
 
 export default {
     name: 'App',
+    components: {
+        SiteHeader,
+        SiteMain,
+        SiteFooter,
+    },
+
     data() {
         return {
-            state
+            state //versione abbreviata di state:state
         }
     },
     methods: {
         callApi(url) {
             axios.get(url)
                 .then(response => {
-                    console.log(response);
+                    //console.log(response.data);
                     this.state.characters = response.data
+                    this.state.loading = false
 
                 })
                 //questo metodo .catch serve per intercettera eventuali errori
@@ -36,29 +43,10 @@ export default {
 </script>
 
 <template>
-    <h1>Breaking Bad Api</h1>
 
-    <characters />
- <!--    <section class="characters">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-5">
-                <div class="col" v-for="character in characters">
-                    <div class="card character">
-                        <img :src="character.img" alt="">
-                        <h3 class="actor">{{ character.name }}</h3>
-                        <span class="category">{{ character.category }}</span>
-                        <span class="status">{{ character.status }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!--    <SiteHeader></SiteHeader>
-
-    <SiteMain></SiteMain>
-
-    <SiteFooter></SiteFooter> -->
+    <SiteHeader />
+    <SiteMain />
+    <SiteFooter />
 
 </template>
 

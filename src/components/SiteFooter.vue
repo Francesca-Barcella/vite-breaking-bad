@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <h2>prova footer</h2>
+
 </template>
 
 

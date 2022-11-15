@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
-    <h2>prova header</h2>
+    <header>
+        <h1>Breaking Bad Api</h1>
+    </header>
 </template>
 
 
