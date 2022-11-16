@@ -1,38 +1,30 @@
 <script>
-import CardsList from './CardsList.vue'
-import SelectCategory from './SelectCategory.vue'
 import { state } from '../state'
 export default {
-    name: 'SiteMain',
-    components: {
-        CardsList,
-        SelectCategory
-    },
+    name: 'Selectcategory',
+   
     data() {
         return {
             state
         }
-    }
+    },
 }
 
 </script>
 
 <template>
-    <main>
+  
         <!-- filtra per category -->
-        <!-- <div class="container">
+        <div class="container">
             <div class="select_category">
-                <select class="p-2 m-3 rounded-3" v-model="filterCategory" @change="metodo">
+                <select class="p-2 m-3 rounded-3">
                     <option value="All Category">All Category</option>
                     <option value="Breaking Bad">Breaking Bad</option>
                     <option value="Better Call Saul">Better Call Saul</option>
                 </select>
             </div>
-        </div> -->
-        <!--  <characters /> -->
-        <SelectCategory />
-        <CardsList />
-    </main>
+        </div>
+
 </template>
 
 
